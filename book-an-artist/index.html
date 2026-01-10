@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book an Artist - Zim Music Productions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d97706",
+              secondary: "#059669",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+      content: "\f3c2";
+      }
+      body {
+      font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Navigation -->
+          <nav class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <a
+              href="https://techgram-ca.github.io/zim-dev/"
+              class="font-['Pacifico'] text-2xl text-primary cursor-pointer"
+              >Zim Music Productions</a
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="https://techgram-ca.github.io/zim-dev/#what-we-do"
+              class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              >What We Do</a
+            >
+            <a
+              href="https://techgram-ca.github.io/zim-dev/mental-health"
+              class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              >Mental Health & Programs</a
+            >
+            <a
+              href="https://techgram-ca.github.io/zim-dev/book-an-artist"
+              class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              >Book An Artist</a
+            >
+			<a
+              href="https://techgram-ca.github.io/zim-dev/gallery"
+              class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              >Gallery</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="w-8 h-8 flex items-center justify-center text-gray-700 cursor-pointer"
+            >
+              <i class="ri-menu-line ri-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-4 py-2 space-y-2">
+          <a href="https://techgram-ca.github.io/zim-dev/#what-we-do" class="block py-2 text-gray-700 cursor-pointer"
+            >What We Do</a
+          >
+          <a href="https://techgram-ca.github.io/zim-dev/mental-health" class="block py-2 text-gray-700 cursor-pointer"
+            >Mental Health & Programs</a
+          >
+          <a href="https://techgram-ca.github.io/zim-dev/book-an-artist" class="block py-2 text-gray-700 cursor-pointer"
+            >Book An Artist</a
+          >
+		   <a href="https://techgram-ca.github.io/zim-dev/gallery" class="block py-2 text-gray-700 cursor-pointer"
+            >Gallery</a
+          >
+          <a href="#contact" class="block py-2 text-gray-700 cursor-pointer"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="py-16 bg-gradient-to-br from-primary/5 to-orange-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+        >
+          Book Our Talented Artists
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+        >
+          Zim Music Productions proudly represents and collaborates with a diverse roster of artists across genres including Afro-fusion, world music, traditional and contemporary African music, Afrobeat, jazz, soul, and DJ culture.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Artists Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Meet Our Artists
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Discover incredible talent from our community. Each artist offers
+            professional performances, authentic experiences, and powerful
+            storytelling.
+          </p>
+        </div>
+
+        <!-- Artists Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="artists-grid">
+          <!-- Artist 1 -->
+          <div
+            class="artist-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-1.jpg"
+                alt="Maya Johnson"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Internationally acclaimed
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Selmor Mtukudzi
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Soulful vocalist and songwriter specializing in contemporary R&B
+                with jazz influences. Known for powerful live performances and
+                authentic storytelling through music.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>5+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="https://www.selmormtukudzi.net" target="_blank"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 2 -->
+          <div
+            class="artist-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+               src="images/artist-2.jpg"
+                alt="Carlos Rivera"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Afro-jazz & World Music
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Dereck Mpofu
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                 Dynamic hip-hop artist and producer who blends traditional and
+                contemporary sounds. Creates engaging performances that connect
+                deeply with diverse audiences.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>7+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.8 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="https://www.dereckmpofu.com" target="_blank"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 3 -->
+          <div
+            class="artist-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-3.jpg"
+                alt="Aisha Patel"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Traditional Mbira & Contemporary fusion
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Mbiraspirit 
+              </h3>
+               <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                 Virtuoso violinist who masterfully blends classical techniques
+                 with contemporary genres. Creates unique musical experiences
+                 that transcend traditional boundaries.
+               </p> 
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>8+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>5.0 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="https://www.mbiraspirit.com" target="_blank"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 4 -->
+          <div
+            class="artist-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-4.jpg"
+                alt="Marcus Thompson"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Rock & Global sounds
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Grand Splendid
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Accomplished jazz pianist and composer with a modern approach to
+                classic sounds. Brings sophisticated musicianship and
+                improvisational excellence to every performance.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>10+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="https://www.grand-splendid.com" target="_blank"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="artist-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-5.jpg"
+                alt="Sofia Martinez"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                World music & Afro-cultural poetry 
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Isiaka Akromah
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Heartfelt folk singer-songwriter who weaves personal narratives
+                into beautiful acoustic arrangements. Creates intimate
+                performances that resonate with audiences of all backgrounds.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>6+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.8 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="https://isiakaakromah.com" target="_blank"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="artist-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-6.jpg"
+                alt="David Kim"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Congolese  rhumba soukous
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Blaise Labamba
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Innovative electronic music producer and DJ specializing in
+                ambient and dance music. Creates immersive soundscapes perfect
+                for modern events and celebrations.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>4+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.7 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 7 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-7.jpg"
+                alt="Zara Ahmed"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Congolese  rhumba
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Dauphin Mbuyi
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Multilingual world music artist who blends traditional melodies
+                with contemporary arrangements. Brings rich cultural heritage
+                and global sounds to every performance.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>9+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 8 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-8.jpg"
+                alt="Trevor Williams"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Contemporary Afro & World music
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Barry Muchetu
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Energetic indie rock guitarist and vocalist known for memorable
+                hooks and dynamic stage presence. Perfect for festivals, clubs,
+                and high-energy events.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>6+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.8 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 9 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-9.jpg"
+                alt="Keisha Brown"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Emerging Afro-fusion
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Lael Tavonga Mushaninga
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Powerful gospel and contemporary Christian music vocalist who
+                inspires through uplifting performances. Brings spiritual depth
+                and vocal excellence to worship and community events.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>12+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>5.0 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artist 10 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-10.jpg"
+                alt="Jamal Washington"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Traditional & contemporary African music
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                Machembere 
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Authentic reggae and Caribbean music artist who brings positive
+                vibes and cultural richness to every performance. Perfect for
+                festivals, outdoor events, and celebrations.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>8+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+		  <!-- Artist 11 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-11.jpg"
+                alt="Jamal Washington"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Rap & hip hop
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                King Manyara 
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Authentic reggae and Caribbean music artist who brings positive
+                vibes and cultural richness to every performance. Perfect for
+                festivals, outdoor events, and celebrations.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>8+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+		  <!-- Artist 12 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-12.jpg"
+                alt="Jamal Washington"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Afrobeat
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                D33DII  
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Authentic reggae and Caribbean music artist who brings positive
+                vibes and cultural richness to every performance. Perfect for
+                festivals, outdoor events, and celebrations.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>8+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors cursor-pointer pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+		  <!-- Artist 13 - Initially Hidden -->
+          <div
+            class="artist-card hidden bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div class="relative">
+              <img
+                src="images/artist-13.jpg"
+                alt="Jamal Washington"
+                class="w-full h-48 object-cover object-top"
+              />
+              <div
+                class="absolute top-4 left-4 bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                DJ / Reggae, Afro & Global sounds
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                DJ Norch 
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed text-sm">
+                Authentic reggae and Caribbean music artist who brings positive
+                vibes and cultural richness to every performance. Perfect for
+                festivals, outdoor events, and celebrations.
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-music-2-line mr-2"></i>
+                  <span>8+ years experience</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="ri-star-fill mr-1 text-yellow-400"></i>
+                  <span>4.9 rating</span>
+                </div>
+              </div>
+              <div class="flex space-x-3">
+                <button
+                  class="flex-1 bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  Book Now
+                </button>
+                <a
+                  href="#"
+                  class="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-lg hover:border-primary transition-colors pointer-events-none text-gray-400 cursor-not-allowed opacity-50"
+                >
+                  <i class="ri-external-link-line text-gray-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+          <button
+            id="load-more-btn"
+            class="bg-secondary text-white px-8 py-3 !rounded-button text-lg font-semibold hover:bg-emerald-600 transition-colors whitespace-nowrap cursor-pointer"
+          >
+            Load More Artists
+          </button>
+          <p id="all-artists-text" class="text-gray-600 mt-4 hidden">
+            All artists are now displayed
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Book Your Artist
+          </h2>
+          <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+            Ready to bring exceptional talent to your event? Fill out our
+            booking form and we'll connect you with your chosen artist to
+            discuss details and availability.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <form id="booking-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="clientName"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Your Name *</label
+                >
+                <input
+                  type="text"
+                  id="clientName"
+                  name="clientName"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <div>
+                <label
+                  for="clientEmail"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Email Address *</label
+                >
+                <input
+                  type="email"
+                  id="clientEmail"
+                  name="clientEmail"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                  placeholder="Enter your email address"
+                />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="clientPhone"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="clientPhone"
+                  name="clientPhone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+              <div>
+                <label
+                  for="organization"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Organization/Company</label
+                >
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                  placeholder="Enter organization name"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="selectedArtist"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Select Artist *</label
+              >
+              <div class="relative">
+                <button
+                  type="button"
+                  id="artistSelectButton"
+                  class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg bg-white text-left focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                >
+                  <span id="artistSelectText" class="text-gray-500"
+                    >Choose an artist</span
+                  >
+                  <i
+                    class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  ></i>
+                </button>
+                <div
+                  id="artistDropdown"
+                  class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg hidden max-h-60 overflow-y-auto"
+                >
+                  <div class="py-1">
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Maya Johnson"
+                    >
+                      Maya Johnson - Soul & R&B
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Carlos Rivera"
+                    >
+                      Carlos Rivera - Hip-Hop & Rap
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Aisha Patel"
+                    >
+                      Aisha Patel - Classical Fusion
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Marcus Thompson"
+                    >
+                      Marcus Thompson - Jazz & Blues
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Sofia Martinez"
+                    >
+                      Sofia Martinez - Folk & Acoustic
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="David Kim"
+                    >
+                      David Kim - Electronic & EDM
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Zara Ahmed"
+                    >
+                      Zara Ahmed - World & Fusion
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Trevor Williams"
+                    >
+                      Trevor Williams - Indie Rock
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Keisha Brown"
+                    >
+                      Keisha Brown - Gospel & Spiritual
+                    </button>
+                    <button
+                      type="button"
+                      class="artist-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Jamal Washington"
+                    >
+                      Jamal Washington - Reggae & Caribbean
+                    </button>
+                  </div>
+                </div>
+                <input
+                  type="hidden"
+                  id="selectedArtist"
+                  name="selectedArtist"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="eventDate"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Event Date *</label
+                >
+                <input
+                  type="date"
+                  id="eventDate"
+                  name="eventDate"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="eventTime"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Preferred Start Time *</label
+                >
+                <input
+                  type="time"
+                  id="eventTime"
+                  name="eventTime"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  for="eventDuration"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Performance Duration</label
+                >
+                <div class="relative">
+                  <button
+                    type="button"
+                    id="durationSelectButton"
+                    class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg bg-white text-left focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                  >
+                    <span id="durationSelectText" class="text-gray-500"
+                      >Select duration</span
+                    >
+                    <i
+                      class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                    ></i>
+                  </button>
+                  <div
+                    id="durationDropdown"
+                    class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg hidden"
+                  >
+                    <div class="py-1">
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="30 minutes"
+                      >
+                        30 minutes
+                      </button>
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="1 hour"
+                      >
+                        1 hour
+                      </button>
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="1.5 hours"
+                      >
+                        1.5 hours
+                      </button>
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="2 hours"
+                      >
+                        2 hours
+                      </button>
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="2.5 hours"
+                      >
+                        2.5 hours
+                      </button>
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="3+ hours"
+                      >
+                        3+ hours
+                      </button>
+                      <button
+                        type="button"
+                        class="duration-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                        data-value="Full day"
+                      >
+                        Full day event
+                      </button>
+                    </div>
+                  </div>
+                  <input
+                    type="hidden"
+                    id="eventDuration"
+                    name="eventDuration"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="expectedAttendees"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Expected Attendees</label
+                >
+                <input
+                  type="number"
+                  id="expectedAttendees"
+                  name="expectedAttendees"
+                  min="1"
+                  max="10000"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                  placeholder="Number of expected attendees"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="eventLocation"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Event Location *</label
+              >
+              <textarea
+                id="eventLocation"
+                name="eventLocation"
+                rows="2"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none text-sm"
+                placeholder="Enter the full address or venue details"
+              ></textarea>
+            </div>
+
+            <div>
+              <label
+                for="eventType"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Event Type *</label
+              >
+              <div class="relative">
+                <button
+                  type="button"
+                  id="eventTypeButton"
+                  class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg bg-white text-left focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                >
+                  <span id="eventTypeText" class="text-gray-500"
+                    >Select event type</span
+                  >
+                  <i
+                    class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  ></i>
+                </button>
+                <div
+                  id="eventTypeDropdown"
+                  class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg hidden"
+                >
+                  <div class="py-1">
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Corporate Event"
+                    >
+                      Corporate Event
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Wedding"
+                    >
+                      Wedding
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Private Party"
+                    >
+                      Private Party
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Festival/Concert"
+                    >
+                      Festival/Concert
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Community Event"
+                    >
+                      Community Event
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Fundraiser"
+                    >
+                      Fundraiser
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Educational/Workshop"
+                    >
+                      Educational/Workshop
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Religious/Spiritual"
+                    >
+                      Religious/Spiritual
+                    </button>
+                    <button
+                      type="button"
+                      class="event-type-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Other"
+                    >
+                      Other
+                    </button>
+                  </div>
+                </div>
+                <input type="hidden" id="eventType" name="eventType" required />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="budget"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Budget Range</label
+              >
+              <div class="relative">
+                <button
+                  type="button"
+                  id="budgetButton"
+                  class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg bg-white text-left focus:ring-2 focus:ring-primary focus:border-transparent transition-colors text-sm"
+                >
+                  <span id="budgetText" class="text-gray-500"
+                    >Select budget range</span
+                  >
+                  <i
+                    class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  ></i>
+                </button>
+                <div
+                  id="budgetDropdown"
+                  class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg hidden"
+                >
+                  <div class="py-1">
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Under $500"
+                    >
+                      Under $500
+                    </button>
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="$500 - $1,000"
+                    >
+                      $500 - $1,000
+                    </button>
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="$1,000 - $2,500"
+                    >
+                      $1,000 - $2,500
+                    </button>
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="$2,500 - $5,000"
+                    >
+                      $2,500 - $5,000
+                    </button>
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="$5,000 - $10,000"
+                    >
+                      $5,000 - $10,000
+                    </button>
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="$10,000+"
+                    >
+                      $10,000+
+                    </button>
+                    <button
+                      type="button"
+                      class="budget-option w-full px-4 py-2 text-left hover:bg-gray-50 text-sm"
+                      data-value="Discuss directly"
+                    >
+                      Discuss directly
+                    </button>
+                  </div>
+                </div>
+                <input type="hidden" id="budget" name="budget" />
+              </div>
+            </div>
+
+            <div>
+              <label
+                for="eventDetails"
+                class="block text-sm font-medium text-gray-700 mb-2"
+                >Event Details & Special Requests</label
+              >
+              <textarea
+                id="eventDetails"
+                name="eventDetails"
+                rows="4"
+                maxlength="1000"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-none text-sm"
+                placeholder="Tell us about your event, atmosphere you're aiming for, any special songs or requirements, technical setup needed, etc."
+              ></textarea>
+              <div class="flex justify-between mt-2">
+                <span class="text-xs text-gray-500">* Required fields</span>
+                <span id="detailsCharCount" class="text-xs text-gray-500"
+                  >0/1000</span
+                >
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+                class="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+              />
+              <label for="terms" class="ml-3 text-sm text-gray-700">
+                I agree to the
+                <a href="#" class="text-primary hover:underline cursor-pointer"
+                  >booking terms and conditions</a
+                >
+                and understand that this submission is a request, not a
+                confirmed booking *
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-primary text-white px-8 py-4 !rounded-button text-lg font-semibold hover:bg-orange-600 transition-colors whitespace-nowrap cursor-pointer"
+            >
+              Submit Booking Request
+            </button>
+
+            <div
+              id="booking-form-status"
+              class="hidden p-4 rounded-lg text-center"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+ <footer id="footer" class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <div class="font-['Pacifico'] text-2xl text-primary mb-4">
+              Zim Music Productions
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed max-w-md">
+              Empowering marginalized artists and communities through music,
+              education, and mental health support. Every voice matters, every
+              story deserves to be heard.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/zimmusicproductions" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@zimusicproductions" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@mentalhealthmatters00" target="_blank"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://techgram-ca.github.io/zim-dev/#what-we-do"
+                  class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  >What We DO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://techgram-ca.github.io/zim-dev/mental-health"
+                  class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  >Mental Health and Programs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://techgram-ca.github.io/zim-dev/#get-involved"
+                  class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  >Get Involved</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://techgram-ca.github.io/zim-dev/book-an-artist"
+                  class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  >Book An Artist</a
+                ></a
+                >
+              </li>
+			  <li>
+                <a
+                  href="https://techgram-ca.github.io/zim-dev/gallery"
+                  class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="ri-mail-line mr-3 text-primary"></i>
+                <span class="text-gray-300">zimmpro@hotmail.com</span>
+              </div>
+              <div class="flex items-center">
+                <i class="ri-phone-line mr-3 text-primary"></i>
+                <span class="text-gray-300">+1(514)-882-9959</span>
+              </div>
+              <div class="flex items-start">
+                <i class="ri-map-pin-line mr-3 text-primary mt-1"></i>
+                <span class="text-gray-300"
+                  >Montreal, Quebec,
+					<br />Canada
+                  </span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2026 Zim Music Productions. All rights reserved.
+            </p>
+			<p class="text-gray-400 text-sm mb-4 md:mb-0">
+              Designed and maintained by  <a
+                  href="https://techgram.ca" target="_blank"
+                  class="text-gray-300 hover:text-white transition-colors cursor-pointer"
+                  >Techgram</a
+                >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script id="mobile-menu-toggle">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+
+    <script id="load-more-artists">
+      document.addEventListener("DOMContentLoaded", function () {
+        const loadMoreBtn = document.getElementById("load-more-btn");
+        const allArtistsText = document.getElementById("all-artists-text");
+        const hiddenArtists = document.querySelectorAll(".artist-card.hidden");
+        loadMoreBtn.addEventListener("click", function () {
+          hiddenArtists.forEach((card) => {
+            card.classList.remove("hidden");
+          });
+          loadMoreBtn.classList.add("hidden");
+          allArtistsText.classList.remove("hidden");
+        });
+      });
+    </script>
+
+    <script id="booking-form-dropdowns">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Artist Selection Dropdown
+        const artistSelectButton = document.getElementById("artistSelectButton");
+        const artistDropdown = document.getElementById("artistDropdown");
+        const artistSelectText = document.getElementById("artistSelectText");
+        const selectedArtistInput = document.getElementById("selectedArtist");
+        const artistOptions = document.querySelectorAll(".artist-option");
+
+        artistSelectButton.addEventListener("click", function () {
+          artistDropdown.classList.toggle("hidden");
+        });
+
+        artistOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            const value = this.getAttribute("data-value");
+            const text = this.textContent;
+            artistSelectText.textContent = text;
+            artistSelectText.classList.remove("text-gray-500");
+            artistSelectText.classList.add("text-gray-900");
+            selectedArtistInput.value = value;
+            artistDropdown.classList.add("hidden");
+          });
+        });
+
+        // Duration Selection Dropdown
+        const durationSelectButton = document.getElementById("durationSelectButton");
+        const durationDropdown = document.getElementById("durationDropdown");
+        const durationSelectText = document.getElementById("durationSelectText");
+        const eventDurationInput = document.getElementById("eventDuration");
+        const durationOptions = document.querySelectorAll(".duration-option");
+
+        durationSelectButton.addEventListener("click", function () {
+          durationDropdown.classList.toggle("hidden");
+        });
+
+        durationOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            const value = this.getAttribute("data-value");
+            const text = this.textContent;
+            durationSelectText.textContent = text;
+            durationSelectText.classList.remove("text-gray-500");
+            durationSelectText.classList.add("text-gray-900");
+            eventDurationInput.value = value;
+            durationDropdown.classList.add("hidden");
+          });
+        });
+
+        // Event Type Dropdown
+        const eventTypeButton = document.getElementById("eventTypeButton");
+        const eventTypeDropdown = document.getElementById("eventTypeDropdown");
+        const eventTypeText = document.getElementById("eventTypeText");
+        const eventTypeInput = document.getElementById("eventType");
+        const eventTypeOptions = document.querySelectorAll(".event-type-option");
+
+        eventTypeButton.addEventListener("click", function () {
+          eventTypeDropdown.classList.toggle("hidden");
+        });
+
+        eventTypeOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            const value = this.getAttribute("data-value");
+            const text = this.textContent;
+            eventTypeText.textContent = text;
+            eventTypeText.classList.remove("text-gray-500");
+            eventTypeText.classList.add("text-gray-900");
+            eventTypeInput.value = value;
+            eventTypeDropdown.classList.add("hidden");
+          });
+        });
+
+        // Budget Dropdown
+        const budgetButton = document.getElementById("budgetButton");
+        const budgetDropdown = document.getElementById("budgetDropdown");
+        const budgetText = document.getElementById("budgetText");
+        const budgetInput = document.getElementById("budget");
+        const budgetOptions = document.querySelectorAll(".budget-option");
+
+        budgetButton.addEventListener("click", function () {
+          budgetDropdown.classList.toggle("hidden");
+        });
+
+        budgetOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            const value = this.getAttribute("data-value");
+            const text = this.textContent;
+            budgetText.textContent = text;
+            budgetText.classList.remove("text-gray-500");
+            budgetText.classList.add("text-gray-900");
+            budgetInput.value = value;
+            budgetDropdown.classList.add("hidden");
+          });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !artistSelectButton.contains(e.target) &&
+            !artistDropdown.contains(e.target)
+          ) {
+            artistDropdown.classList.add("hidden");
+          }
+          if (
+            !durationSelectButton.contains(e.target) &&
+            !durationDropdown.contains(e.target)
+          ) {
+            durationDropdown.classList.add("hidden");
+          }
+          if (
+            !eventTypeButton.contains(e.target) &&
+            !eventTypeDropdown.contains(e.target)
+          ) {
+            eventTypeDropdown.classList.add("hidden");
+          }
+          if (
+            !budgetButton.contains(e.target) &&
+            !budgetDropdown.contains(e.target)
+          ) {
+            budgetDropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+
+    <script id="booking-form-submission">
+      document.addEventListener("DOMContentLoaded", function () {
+        const eventDetailsTextarea = document.getElementById("eventDetails");
+        const detailsCharCount = document.getElementById("detailsCharCount");
+        const bookingForm = document.getElementById("booking-form");
+        const formStatus = document.getElementById("booking-form-status");
+
+        // Character count for event details
+        eventDetailsTextarea.addEventListener("input", function () {
+          const currentLength = this.value.length;
+          detailsCharCount.textContent = `${currentLength}/1000`;
+          if (currentLength > 900) {
+            detailsCharCount.classList.add("text-red-500");
+          } else {
+            detailsCharCount.classList.remove("text-red-500");
+          }
+          if (currentLength >= 1000) {
+            this.value = this.value.substring(0, 1000);
+            detailsCharCount.textContent = "1000/1000";
+          }
+        });
+
+        // Form submission
+        bookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const formData = new FormData(this);
+          const data = {};
+          for (let [key, value] of formData.entries()) {
+            data[key] = value;
+          }
+
+          // Show loading state
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalText = submitButton.textContent;
+          submitButton.textContent = "Submitting Request...";
+          submitButton.disabled = true;
+
+          // Simulate form submission
+          setTimeout(() => {
+            formStatus.className =
+              "p-6 rounded-lg text-center bg-green-50 border border-green-200 text-green-800";
+            formStatus.innerHTML = `
+      <i class="ri-check-circle-line ri-2x mb-3 text-green-600"></i>
+      <h3 class="text-lg font-semibold mb-2">Booking Request Submitted Successfully!</h3>
+      <p class="text-sm mb-3">Thank you for your interest in booking ${data.selectedArtist || "one of our artists"}. We've received your request and will get back to you within 24 hours to discuss availability and details.</p>
+      <p class="text-xs text-green-600">Reference ID: BR-${Date.now()}</p>
+      `;
+            formStatus.classList.remove("hidden");
+
+            // Reset form
+            bookingForm.reset();
+            // Reset dropdown displays
+            document.getElementById("artistSelectText").textContent =
+              "Choose an artist";
+            document
+              .getElementById("artistSelectText")
+              .classList.add("text-gray-500");
+            document.getElementById("durationSelectText").textContent =
+              "Select duration";
+            document
+              .getElementById("durationSelectText")
+              .classList.add("text-gray-500");
+            document.getElementById("eventTypeText").textContent =
+              "Select event type";
+            document.getElementById("eventTypeText").classList.add("text-gray-500");
+            document.getElementById("budgetText").textContent = "Select budget range";
+            document.getElementById("budgetText").classList.add("text-gray-500");
+            detailsCharCount.textContent = "0/1000";
+            detailsCharCount.classList.remove("text-red-500");
+
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+
+            // Scroll to success message
+            formStatus.scrollIntoView({ behavior: "smooth", block: "center" });
+          }, 2000);
+        });
+      });
+    </script>
+
+    <script id="book-now-buttons">
+      document.addEventListener("DOMContentLoaded", function () {
+        const bookNowButtons = document.querySelectorAll(
+          ".artist-card button:first-of-type",
+        );
+        bookNowButtons.forEach((button, index) => {
+          button.addEventListener("click", function () {
+            const artistCard = this.closest(".artist-card");
+            const artistName = artistCard.querySelector("h3").textContent;
+            const artistGenre = artistCard.querySelector(".absolute div").textContent;
+
+            // Scroll to booking form
+            document.querySelector("#booking-form").scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+
+            // Pre-select the artist in the dropdown
+            setTimeout(() => {
+              const artistSelectText = document.getElementById("artistSelectText");
+              const selectedArtistInput = document.getElementById("selectedArtist");
+              artistSelectText.textContent = `${artistName} - ${artistGenre}`;
+              artistSelectText.classList.remove("text-gray-500");
+              artistSelectText.classList.add("text-gray-900");
+              selectedArtistInput.value = artistName;
+            }, 500);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
