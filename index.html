@@ -48,6 +48,9 @@
       body {
       font-family: 'Inter', sans-serif;
       }
+	  #success:target {
+			display: block;
+		}
     </style>
   </head>
   <body class="bg-white">
@@ -630,13 +633,6 @@
                     Send Message
                   </button>
                 </div>
-				<div
-					  id="success"
-					  class="hidden mt-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-700"
-					>
-					  <h3 class="font-semibold">Message sent successfully</h3>
-					  <p class="text-sm">Thank you for reaching out. We’ll get back to you soon.</p>
-					</div>
               </form>
             </div>
             <!-- Contact Information -->
@@ -710,6 +706,16 @@
         </div>
       </div>
     </section>
+	
+	<section id="success">
+	<div
+					  
+					  class="hidden mt-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-700"
+					>
+					  <h3 class="font-semibold">Message sent successfully</h3>
+					  <p class="text-sm">Thank you for reaching out. We’ll get back to you soon.</p>
+					</div>
+	</section>
     <!-- Footer -->
     <footer id="footer" class="bg-gray-900 text-white py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
