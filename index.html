@@ -836,31 +836,28 @@
       </div>
     </footer>
     <script id="mobile-menu-toggle">
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenuButton.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-        });
-      });
-    </script>
-    <script id="smooth-scrolling">
-      document.addEventListener("DOMContentLoaded", function () {
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          });
-        });
-      });
+		document.addEventListener("DOMContentLoaded", function () {
+		  const links = document.querySelectorAll('a[href^="#"]');
+
+		  links.forEach((link) => {
+			link.addEventListener("click", function (e) {
+			  const targetId = this.getAttribute("href").substring(1);
+			  const targetElement = document.getElementById(targetId);
+
+			  if (!targetElement) return;
+
+			  e.preventDefault();
+			  location.hash = targetId;
+
+			  targetElement.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			  });
+
+			  history.replaceState(null, "", location.pathname);
+			});
+		  });
+		});
     </script>
     <script id="mission-vision-toggle">
       document.addEventListener("DOMContentLoaded", function () {
@@ -906,50 +903,5 @@
         });
       });
     </script>
-    <!-- <script id="contact-form-handler"> -->
-      <!-- document.addEventListener("DOMContentLoaded", function () { -->
-        <!-- const contactForm = document.getElementById("contact-form"); -->
-        <!-- const messageTextarea = contactForm.querySelector('textarea[name="message"]'); -->
-        <!-- const charCount = document.getElementById("char-count"); -->
-        <!-- messageTextarea.addEventListener("input", function () { -->
-          <!-- const currentLength = this.value.length; -->
-          <!-- charCount.textContent = currentLength; -->
-          <!-- if (currentLength > 500) { -->
-            <!-- this.value = this.value.substring(0, 500); -->
-            <!-- charCount.textContent = 500; -->
-          <!-- } -->
-        <!-- }); -->
-        <!-- contactForm.addEventListener("submit", function (e) { -->
-          <!-- e.preventDefault(); -->
-          <!-- const formData = new FormData(this); -->
-          <!-- const submitButton = this.querySelector('button[type="submit"]'); -->
-          <!-- const originalText = submitButton.textContent; -->
-          <!-- const messageLength = formData.get("message").length; -->
-          <!-- if (messageLength > 500) { -->
-            <!-- alert("Message must be 500 characters or less"); -->
-            <!-- return; -->
-          <!-- } -->
-          <!-- submitButton.textContent = "Sending..."; -->
-          <!-- submitButton.disabled = true; -->
-          <!-- const formDataObj = {}; -->
-          <!-- for (let [key, value] of formData.entries()) { -->
-            <!-- formDataObj[key] = value; -->
-          <!-- } -->
-          <!-- setTimeout(() => { -->
-            <!-- submitButton.textContent = "Message Sent!"; -->
-            <!-- submitButton.classList.remove("bg-primary", "hover:bg-orange-600"); -->
-            <!-- submitButton.classList.add("bg-green-500"); -->
-            <!-- contactForm.reset(); -->
-            <!-- charCount.textContent = "0"; -->
-            <!-- setTimeout(() => { -->
-              <!-- submitButton.textContent = originalText; -->
-              <!-- submitButton.disabled = false; -->
-              <!-- submitButton.classList.remove("bg-green-500"); -->
-              <!-- submitButton.classList.add("bg-primary", "hover:bg-orange-600"); -->
-            <!-- }, 3000); -->
-          <!-- }, 1500); -->
-        <!-- }); -->
-      <!-- }); -->
-    <!-- </script> -->
   </body>
 </html>
