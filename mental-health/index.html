@@ -5,44 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health & Wellbeing - Zim Music Productions</title>
-    <script src="https://cdn.tailwindcss.com/3.4.16">
-    </script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                primary: "#d97706",
-                secondary: "#059669",
-              },
-              borderRadius: {
-                none: "0px",
-                sm: "4px",
-                DEFAULT: "8px",
-                md: "12px",
-                lg: "16px",
-                xl: "20px",
-                "2xl": "24px",
-                "3xl": "32px",
-                full: "9999px",
-                button: "8px",
-              },
-            },
-          },
-        };
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
-    <style>
-        :where([class^="ri-"])::before {
-        content: "\f3c2";
-        }
-        body {
-        font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link href="../assets/css/output.css" rel="stylesheet">
 </head>
 
 <body class="bg-white">
@@ -69,17 +36,17 @@
               >What We Do</a
             >
             <a
-              href="https://techgram-ca.github.io/zim-dev/mental-health"
+              href="mental-health"
               class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
               >Mental Health & Programs</a
             >
             <a
-              href="https://techgram-ca.github.io/zim-dev/book-an-artist"
+              href="book-an-artist"
               class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
               >Book An Artist</a
             >
 			<a
-              href="https://techgram-ca.github.io/zim-dev/gallery"
+              href="/gallery"
               class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
               >Gallery</a
             >
@@ -101,16 +68,16 @@
       </div>
       <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
         <div class="px-4 py-2 space-y-2">
-          <a href="https://techgram-ca.github.io/zim-dev/#what-we-do" class="block py-2 text-gray-700 cursor-pointer"
+          <a href="../#what-we-do" class="block py-2 text-gray-700 cursor-pointer"
             >What We Do</a
           >
-          <a href="https://techgram-ca.github.io/zim-dev/mental-health" class="block py-2 text-gray-700 cursor-pointer"
+          <a href="mental-health" class="block py-2 text-gray-700 cursor-pointer"
             >Mental Health & Programs</a
           >
-          <a href="https://techgram-ca.github.io/zim-dev/book-an-artist" class="block py-2 text-gray-700 cursor-pointer"
+          <a href="book-an-artist" class="block py-2 text-gray-700 cursor-pointer"
             >Book An Artist</a
           >
-		   <a href="https://techgram-ca.github.io/zim-dev/gallery" class="block py-2 text-gray-700 cursor-pointer"
+		   <a href="/gallery" class="block py-2 text-gray-700 cursor-pointer"
             >Gallery</a
           >
           <a href="#contact" class="block py-2 text-gray-700 cursor-pointer"
@@ -343,155 +310,152 @@ Our Mental Health Team
             </div>
         </section> -->
 
-        <!-- Contact & Support Access -->
-        <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-Get Mental Health Support
-</h2>
-                    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
-                        Multiple ways to access support and begin your wellness journey. We're here for you every step of the way.
-                    </p>
-                </div>
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                    <div class="grid lg:grid-cols-2 gap-0">
-                        <!-- Contact Form -->
-                        <div class="p-8 md:p-12">
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Request Support</h3>
-                            <form id="mental-health-form" action="https://formsubmit.co/8ad08040ee6ff09cbd86420875b63def" method="POST" class="space-y-6">
-                                <input type="hidden" name="_subject" value="New Mental Support Request">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_template" value="table">
-                                <input type="hidden" name="_next" value="https://techgram-ca.github.io/zim-dev/mental-health/#success">
+<!-- Contact & Support Access -->
+<section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Get Mental Health Support
+            </h2>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                Multiple ways to access support and begin your wellness journey. We're here for you every step of the way.
+            </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+                <!-- Contact Form (60%) -->
+                <div class="md:w-3/5 p-8 md:p-12">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Request Support</h3>
+                    <form id="mental-health-form" action="https://formsubmit.co/8ad08040ee6ff09cbd86420875b63def" method="POST" class="space-y-6">
+                        <input type="hidden" name="_subject" value="New Mental Health Support Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://techgram-ca.github.io/zim-dev/mental-health/#success">
 
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                        <input type="text" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
-                                    </div>
-                                    <div>
-                                        <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                        <input type="text" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                    <input type="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone (Optional)</label>
-                                    <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Type of Support Needed</label>
-                                    <div class="relative">
-                                        <select name="supportType" required class="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm appearance-none bg-white">
-                                            <option value="">Please select...</option>
-                                            <option value="crisis">Crisis Support (Immediate)</option>
-                                            <option value="counseling">Individual Counseling</option>
-                                            <option value="group">Group Therapy</option>
-                                            <option value="art-therapy">Art/Music Therapy</option>
-                                            <option value="peer-support">Peer Support</option>
-                                            <option value="workshops">Wellness Workshops</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                        <i class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
-                                    <div class="flex space-x-4">
-                                        <label class="flex items-center">
-                                            <input type="radio" name="contactMethod" value="email" class="sr-only">
-                                            <div class="contact-radio w-4 h-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer"></div>
-                                            <span class="text-sm text-gray-700">Email</span>
-                                        </label>
-                                        <label class="flex items-center">
-                                            <input type="radio" name="contactMethod" value="phone" class="sr-only">
-                                            <div class="contact-radio w-4 h-4 border-2 border-gray-300 rounded-full mr-2 cursor-pointer"></div>
-                                            <span class="text-sm text-gray-700">Phone</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">How can we help? (Optional)</label>
-                                    <textarea name="message" rows="4" maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm resize-vertical" placeholder="Share any specific concerns or questions..."></textarea>
-                                </div>
-                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                                    <div class="flex items-start">
-                                        <i class="ri-information-line text-blue-600 mr-2 mt-0.5"></i>
-                                        <div class="text-sm text-blue-800">
-                                            <strong>Confidentiality:</strong> All information shared is confidential and will only be used to connect you with appropriate support services.
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="w-full bg-secondary text-white px-8 py-3 !rounded-button text-lg font-semibold hover:bg-emerald-600 transition-colors whitespace-nowrap cursor-pointer">
-                                    Request Support
-                                </button>
-                                <div id="success" class="hidden target:block mt-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-700">
-                                    <h3 class="font-semibold">Request sent successfully</h3>
-                                    <p class="text-sm">Thank you for reaching out. We’ll get back to you soon.</p>
-                                </div>
-                            </form>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                <input type="text" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                <input type="text" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
+                            </div>
                         </div>
-                        <!-- Support Information -->
-                        <div class="bg-gradient-to-br from-secondary to-emerald-600 p-8 md:p-12 text-white">
-                            <h3 class="text-2xl font-semibold mb-6">Immediate Support Options</h3>
-                            <div class="space-y-6 mb-8">
-                                <div class="bg-white/10 rounded-lg p-4">
-                                    <div class="flex items-center mb-2">
-                                        <i class="ri-alarm-warning-line text-xl mr-3 text-red-300"></i>
-                                        <div class="font-semibold text-red-100">Crisis Support - Available 24/7</div>
-                                    </div>
-                                    <div class="text-emerald-100 text-sm">
-                                        <div>National Suicide Prevention: <strong><a href="tel:988">988</a></strong></div>
-                                        <div>Crisis Text Line: <strong>Text HOME to 741741</strong></div>
-                                        <div>Emergency Services: <strong><a href="tel:911">911</a></strong></div>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="ri-phone-line text-xl mr-4 mt-1 text-emerald-100"></i>
-                                    <div>
-                                        <div class="font-medium">Mental Health Hotline</div>
-                                        <div class="text-emerald-100"><a href="tel:+15148829959">+1(514)-882-9959</a></div>
-                                        <div class="text-sm text-emerald-200">Mon-Fri: 8am-8pm, Sat-Sun: 10am-6pm</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <i class="ri-mail-line text-xl mr-4 mt-1 text-emerald-100"></i>
-                                    <div>
-                                        <div class="font-medium">Email Support</div>
-                                        <div class="text-emerald-100"><a href="mailto:lmabhunu@yahoo.com">lmabhunu@yahoo.com</a></div>
-                                        <div class="text-sm text-emerald-200">Response within 24 hours</div>
-                                    </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" name="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone (Optional)</label>
+                                <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Type of Support Needed</label>
+                                <div class="relative">
+                                    <select name="supportType" required class="w-full px-4 py-3 pr-8 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm appearance-none bg-white">
+                                        <option value="">Please select...</option>
+                                        <option value="crisis">Crisis Support (Immediate)</option>
+                                        <option value="counseling">Individual Counseling</option>
+                                        <option value="group">Group Therapy</option>
+                                        <option value="art-therapy">Art/Music Therapy</option>
+                                        <option value="peer-support">Peer Support</option>
+                                        <option value="workshops">Wellness Workshops</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <i class="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
                                 </div>
                             </div>
-                            <div class="border-t border-emerald-400 pt-6">
-                                <h4 class="font-semibold mb-3">Response Times</h4>
-                                <div class="space-y-2 text-sm text-emerald-100">
-                                    <div class="flex justify-between">
-                                        <span>Crisis Situations:</span>
-                                        <span>Immediate</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>Urgent Support:</span>
-                                        <span>Same day</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>General Inquiries:</span>
-                                        <span>24-48 hours</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>Appointment Requests:</span>
-                                        <span>2-3 business days</span>
-                                    </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
+                                <div class="flex items-center space-x-4 h-12">
+                                    <label class="flex items-center cursor-pointer">
+                                        <input type="radio" name="contactMethod" value="email" class="sr-only">
+                                        <div class="contact-radio w-4 h-4 border-2 border-gray-300 rounded-full mr-2"></div>
+                                        <span class="text-sm text-gray-700">Email</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer">
+                                        <input type="radio" name="contactMethod" value="phone" class="sr-only">
+                                        <div class="contact-radio w-4 h-4 border-2 border-gray-300 rounded-full mr-2"></div>
+                                        <span class="text-sm text-gray-700">Phone</span>
+                                    </label>
                                 </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">How can we help? (Optional)</label>
+                            <textarea name="message" rows="4" maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent text-sm resize-vertical" placeholder="Share any specific concerns or questions..."></textarea>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div class="flex items-start">
+                                <i class="ri-information-line text-blue-600 mr-2 mt-0.5"></i>
+                                <div class="text-sm text-blue-800">
+                                    <strong>Confidentiality:</strong> All information shared is confidential and will only be used to connect you with appropriate support services.
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary text-white px-8 py-3 !rounded-button text-lg font-semibold hover:bg-emerald-600 transition-colors whitespace-nowrap cursor-pointer">
+                            Request Support
+                        </button>
+                        <div id="success" class="hidden target:block mt-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-700">
+                            <h3 class="font-semibold">Request sent successfully</h3>
+                            <p class="text-sm">Thank you for reaching out. We'll get back to you soon.</p>
+                        </div>
+                    </form>
+                </div>
+                <!-- Support Information (40%) -->
+                <div class="md:w-2/5 bg-secondary p-8 md:p-12 text-white">
+                    <h3 class="text-2xl font-semibold mb-6">Immediate Support Options</h3>
+                    <div class="space-y-6 mb-8">
+                        <div class="bg-white/10 rounded-lg p-4">
+                            <div class="flex items-center mb-2">
+                                <i class="ri-alarm-warning-line text-xl mr-3 text-red-300"></i>
+                                <div class="font-semibold text-red-100">Crisis Support - Available 24/7</div>
+                            </div>
+                            <div class="text-emerald-100 text-sm">
+                                <div>National Suicide Prevention: <strong><a href="tel:988">988</a></strong></div>
+                                <div>Crisis Text Line: <strong>Text HOME to 741741</strong></div>
+                                <div>Emergency Services: <strong><a href="tel:911">911</a></strong></div>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-mail-line text-xl mr-4 mt-1 text-emerald-100"></i>
+                            <div>
+                                <div class="font-medium">Mental Health Support</div>
+                                <div class="text-emerald-100"><a href="mailto:lmabhunu@yahoo.com">lmabhunu@yahoo.com</a></div>
+                                <div class="text-sm text-emerald-200">Response within 24 hours</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-emerald-400 pt-6">
+                        <h4 class="font-semibold mb-3">Response Times</h4>
+                        <div class="space-y-2 text-sm text-emerald-100">
+                            <div class="flex justify-between">
+                                <span>Crisis Situations:</span>
+                                <span>Immediate</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Urgent Support:</span>
+                                <span>Same day</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>General Inquiries:</span>
+                                <span>24-48 hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Appointment Requests:</span>
+                                <span>2-3 business days</span>
                             </div>
                         </div>
                     </div>
                 </div>
-        </section>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Footer -->
         <footer id="footer" class="bg-gray-900 text-white py-16">

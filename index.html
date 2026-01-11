@@ -7,43 +7,11 @@
     <title>
         Zim Music Productions - Empowering Voices Through Music, Community & Care
     </title>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-              extend: {
-                colors: {
-                  primary: "#d97706",
-                  secondary: "#059669",
-                },
-                borderRadius: {
-                  none: "0px",
-                  sm: "4px",
-                  DEFAULT: "8px",
-                  md: "12px",
-                  lg: "16px",
-                  xl: "20px",
-                  "2xl": "24px",
-                  "3xl": "32px",
-                  full: "9999px",
-                  button: "8px",
-                },
-              },
-            },
-          };
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
-    <style>
-        :where([class^="ri-"])::before {
-          content: "\f3c2";
-          }
-          body {
-          font-family: 'Inter', sans-serif;
-          }
-    </style>
+    <link href="assets/css/output.css" rel="stylesheet">
 </head>
 
 <body class="bg-white">
@@ -51,9 +19,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-3">
-                <a href="https://techgram-ca.github.io/zim-dev/" class="flex items-center gap-3 cursor-pointer">
+                <a href="/" class="flex items-center gap-3 cursor-pointer">
                     <img 
-                    src="images/logo.png" 
+                    src="assets/images/logo.png" 
                     alt="Zim Music Productions Logo"
                     class="h-8 sm:h-10 md:h-12 w-auto object-contain"
                     />
@@ -69,17 +37,17 @@
               >What We Do</a
             >
             <a
-              href="https://techgram-ca.github.io/zim-dev/mental-health"
+              href="mental-health"
               class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
               >Mental Health & Programs</a
             >
             <a
-              href="https://techgram-ca.github.io/zim-dev/book-an-artist"
+              href="book-an-artist"
               class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
               >Book An Artist</a
             >
 			<a
-              href="https://techgram-ca.github.io/zim-dev/gallery"
+              href="gallery"
               class="text-gray-700 hover:text-primary transition-colors cursor-pointer"
               >Gallery</a
             >
@@ -104,13 +72,13 @@
           <a href="#what-we-do" class="block py-2 text-gray-700 cursor-pointer"
             >What We Do</a
           >
-          <a href="https://techgram-ca.github.io/zim-dev/mental-health" class="block py-2 text-gray-700 cursor-pointer"
+          <a href="mental-health" class="block py-2 text-gray-700 cursor-pointer"
             >Mental Health & Programs</a
           >
-          <a href="https://techgram-ca.github.io/zim-dev/book-an-artist" class="block py-2 text-gray-700 cursor-pointer"
+          <a href="book-an-artist" class="block py-2 text-gray-700 cursor-pointer"
             >Book An Artist</a
           >
-		   <a href="https://techgram-ca.github.io/zim-dev/gallery" class="block py-2 text-gray-700 cursor-pointer"
+		   <a href="gallery" class="block py-2 text-gray-700 cursor-pointer"
             >Gallery</a
           >
           <a href="#contact" class="block py-2 text-gray-700 cursor-pointer"
@@ -120,7 +88,7 @@
       </div>
     </nav>
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('images/hero-img.jpg'); background-size: cover; background-position: center;">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('assets/images/hero-img.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent"></div>
         <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
@@ -145,10 +113,10 @@
                     <div>
                         <div class="mb-6">
                             <div class="flex bg-orange-100 rounded-lg p-1 mb-6">
-                                <button id="mission-tab" class="flex-1 px-4 py-2 text-sm font-medium text-white bg-primary rounded-md shadow-sm transition-all">
+                                <button id="mission-tab" class="flex-1 px-4 py-2 text-sm font-medium text-white bg-primary rounded-md shadow-sm transition-all cursor-pointer">
                                     Our Mission
                                 </button>
-                                <button id="vision-tab" class="flex-1 px-4 py-2 text-sm font-medium text-orange-600 hover:text-orange-700 transition-all">
+                                <button id="vision-tab" class="flex-1 px-4 py-2 text-sm font-medium text-orange-600 hover:text-orange-700 transition-all cursor-pointer">
                                     Our Vision
                                 </button>
                             </div>
@@ -193,7 +161,7 @@
                         </div>
                     </div>
                     <div class="relative h-96 min-h-96 flex-shrink-0">
-                        <img src="images/mission.jpg" alt="Community of diverse artists" class="absolute inset-0 w-full h-full object-cover object-center rounded-2xl shadow-xl" />
+                        <img src="assets/images/mission.jpg" alt="Community of diverse artists" class="absolute inset-0 w-full h-full object-cover object-center rounded-2xl shadow-xl" />
                     </div>
                 </div>
             </div>
@@ -213,7 +181,7 @@
                     <!-- Music & Creative Programs -->
                     <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden flex flex-col h-full">
                         <div class="relative">
-                            <img src="images/creative-programs.jpg" alt="Music & Creative Programs" class="w-full h-48 object-cover object-top" />
+                            <img src="assets/images/creative-programs.jpg" alt="Music & Creative Programs" class="w-full h-48 object-cover object-top" />
                             <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
                                 <i class="ri-music-2-line mr-2"></i>Music & Creative
                             </div>
@@ -225,17 +193,13 @@
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
                                 We offer workshops and seminars that inspire creativity, build skills, and support artistic expression within the music community.
                             </p>
-                            <!-- <a href="https://techgram-ca.github.io/zim-dev/mental-health"><button
-                class="text-primary font-medium text-sm hover:text-orange-600 transition-colors cursor-pointer mt-auto text-left"
-              >
-                Learn More <i class="ri-arrow-right-line ml-1"></i>
-              </button></a> -->
+                            
                         </div>
                     </div>
                     <!-- Mental Health Forums -->
                     <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden flex flex-col h-full">
                         <div class="relative">
-                            <img src="images/mental-health.jpg" alt="Mental Health Forums" class="w-full h-48 object-cover object-top" />
+                            <img src="assets/images/mental-health.jpg" alt="Mental Health Forums" class="w-full h-48 object-cover object-top" />
                             <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">
                                 <i class="ri-heart-line mr-2"></i>Mental Health
                             </div>
@@ -257,7 +221,7 @@
                     <!-- Education & Mentorship -->
                     <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden flex flex-col h-full">
                         <div class="relative">
-                            <img src="images/education.jpg" alt="Education & Mentorship" class="w-full h-48 object-cover object-top" />
+                            <img src="assets/images/education.jpg" alt="Education & Mentorship" class="w-full h-48 object-cover object-top" />
                             <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                                 <i class="ri-graduation-cap-line mr-2"></i>Education
                             </div>
@@ -279,7 +243,7 @@
                     <!-- Events & Community Engagement -->
                     <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden flex flex-col h-full">
                         <div class="relative">
-                            <img src="images/events.jpg" alt="Events & Community Engagement" class="w-full h-48 object-cover object-top" />
+                            <img src="assets/images/events.jpg" alt="Events & Community Engagement" class="w-full h-48 object-cover object-top" />
                             <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                                 <i class="ri-community-line mr-2"></i>Community
                             </div>
@@ -291,11 +255,7 @@
                             <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
                                 We host inclusive events and community initiatives that bring people together, celebrate creativity, and strengthen meaningful connections.
                             </p>
-                            <!-- <a href="https://techgram-ca.github.io/zim-dev/mental-health"><button
-                class="text-primary font-medium text-sm hover:text-orange-600 transition-colors cursor-pointer mt-auto text-left"
-              >
-                Learn More <i class="ri-arrow-right-line ml-1"></i>
-              </button></a> -->
+                           
                         </div>
                     </div>
                 </div>
@@ -306,20 +266,20 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get Involved
-          </h2>
+                        Get Involved
+                    </h2>
                     <p class="text-lg text-gray-700 max-w-2xl mx-auto">
                         Join our mission to empower artists and strengthen communities. There are many ways to make a meaningful impact and be part of our growing movement.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Donate -->
-                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow">
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow flex flex-col">
                         <div class="w-20 h-20 flex items-center justify-center bg-primary/10 rounded-2xl mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                             <i class="ri-heart-fill ri-2x text-primary"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Donate</h3>
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                             Your contribution directly funds artist development, mental health resources, and community programs that change lives.
                         </p>
                         <a href="#contact">
@@ -329,12 +289,12 @@
                         </a>
                     </div>
                     <!-- Volunteer -->
-                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow">
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow flex flex-col">
                         <div class="w-20 h-20 flex items-center justify-center bg-secondary/10 rounded-2xl mx-auto mb-6 group-hover:bg-secondary/20 transition-colors">
                             <i class="ri-hand-heart-line ri-2x text-secondary"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Volunteer</h3>
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                             Share your skills and passion by volunteering at events, workshops, or providing mentorship to emerging artists in our community.
                         </p>
                         <a href="#contact">
@@ -344,12 +304,12 @@
                         </a>
                     </div>
                     <!-- Partner -->
-                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow">
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow flex flex-col">
                         <div class="w-20 h-20 flex items-center justify-center bg-blue-100 rounded-2xl mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
                             <i class="ri-handshake-line ri-2x text-blue-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Partner</h3>
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                             Organizations and businesses can partner with us to sponsor programs, provide venues, or create opportunities for our artists.
                         </p>
                         <a href="#contact">
@@ -359,14 +319,14 @@
                         </a>
                     </div>
                     <!-- Attend Events -->
-                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow">
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center group hover:shadow-xl transition-shadow flex flex-col">
                         <div class="w-20 h-20 flex items-center justify-center bg-purple-100 rounded-2xl mx-auto mb-6 group-hover:bg-purple-200 transition-colors">
                             <i class="ri-calendar-event-line ri-2x text-purple-600"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">
-              Attend Events
-            </h3>
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            Attend Events
+                        </h3>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                             Experience incredible performances, support our artists, and connect with like-minded community members at our regular showcases and events.
                         </p>
                         <a href="#contact">
@@ -401,19 +361,19 @@
 
                     <!-- Content -->
                     <div class="flex items-center gap-12 px-8 pb-4" style="width: max-content;">
-                        <img src="images/sponsers/sponser-1.png" alt="Foundation For Black Communities" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-2.png" alt="Mental Health Healing" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-3.png" alt="Zim Music Productions" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-4.png" alt="514 Online Mix" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-5.jpg" alt="Cameroon's Jewels" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-6.jpg" alt="Teal Heal" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-7.jpg" alt="KK&David Consulting" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-8.jpg" alt="Bistro Nolah" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-9.jpg" alt="QBBE" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-10.jpg" alt="Groupe 33" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-11.png" alt="Youth in Motion" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-12.png" alt="LMRC" class="w-48 h-48 object-contain flex-shrink-0" />
-                        <img src="images/sponsers/sponser-13.png" alt="IDEES AFRIQUE" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-1.png" alt="Foundation For Black Communities" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-2.png" alt="Mental Health Healing" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-3.png" alt="Zim Music Productions" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-4.png" alt="514 Online Mix" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-5.jpg" alt="Cameroon's Jewels" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-6.jpg" alt="Teal Heal" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-7.jpg" alt="KK&David Consulting" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-8.jpg" alt="Bistro Nolah" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-9.jpg" alt="QBBE" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-10.jpg" alt="Groupe 33" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-11.png" alt="Youth in Motion" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-12.png" alt="LMRC" class="w-48 h-48 object-contain flex-shrink-0" />
+                        <img src="assets/images/sponsers/sponser-13.png" alt="IDEES AFRIQUE" class="w-48 h-48 object-contain flex-shrink-0" />
                     </div>
                 </div>
             </div>
@@ -494,7 +454,7 @@
                             </form>
                         </div>
                         <!-- Contact Information -->
-                        <div class="bg-gradient-to-br from-primary to-orange-600 p-8 md:p-12 text-white">
+                        <div class="bg-primary p-8 md:p-12 text-white">
                             <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
                             <div class="space-y-6 mb-8">
                                 <div class="flex items-start">
@@ -697,49 +657,51 @@
 		  });
 		});
     </script>
-    <script id="mission-vision-toggle">
-      document.addEventListener("DOMContentLoaded", function () {
-        const missionTab = document.getElementById("mission-tab");
-        const visionTab = document.getElementById("vision-tab");
-        const missionContent = document.getElementById("mission-content");
-        const visionContent = document.getElementById("vision-content");
-        missionTab.addEventListener("click", function () {
-          missionTab.classList.add(
-            "bg-primary",
-            "text-white",
-            "shadow-sm",
-            "rounded-md",
-          );
-          missionTab.classList.remove("text-orange-600", "hover:text-orange-700");
-          visionTab.classList.remove(
-            "bg-primary",
-            "text-white",
-            "shadow-sm",
-            "rounded-md",
-          );
-          visionTab.classList.add("text-orange-600", "hover:text-orange-700");
-          missionContent.classList.remove("hidden");
-          visionContent.classList.add("hidden");
-        });
-        visionTab.addEventListener("click", function () {
-          visionTab.classList.add(
-            "bg-primary",
-            "text-white",
-            "shadow-sm",
-            "rounded-md",
-          );
-          visionTab.classList.remove("text-orange-600", "hover:text-orange-700");
-          missionTab.classList.remove(
-            "bg-primary",
-            "text-white",
-            "shadow-sm",
-            "rounded-md",
-          );
-          missionTab.classList.add("text-orange-600", "hover:text-orange-700");
-          visionContent.classList.remove("hidden");
-          missionContent.classList.add("hidden");
-        });
-      });
-    </script>
+<script id="mission-vision-toggle">
+  document.addEventListener("DOMContentLoaded", function () {
+    const missionTab = document.getElementById("mission-tab");
+    const visionTab = document.getElementById("vision-tab");
+    const missionContent = document.getElementById("mission-content");
+    const visionContent = document.getElementById("vision-content");
+    
+    missionTab.addEventListener("click", function () {
+      missionTab.classList.add(
+        "bg-primary",  // Back to bg-primary (works with our CSS now)
+        "text-white",
+        "shadow-sm",
+        "rounded-md",
+      );
+      missionTab.classList.remove("text-orange-600", "hover:text-orange-700");
+      visionTab.classList.remove(
+        "bg-primary",  // Back to bg-primary
+        "text-white",
+        "shadow-sm",
+        "rounded-md",
+      );
+      visionTab.classList.add("text-orange-600", "hover:text-orange-700");
+      missionContent.classList.remove("hidden");
+      visionContent.classList.add("hidden");
+    });
+    
+    visionTab.addEventListener("click", function () {
+      visionTab.classList.add(
+        "bg-primary",  // Back to bg-primary
+        "text-white",
+        "shadow-sm",
+        "rounded-md",
+      );
+      visionTab.classList.remove("text-orange-600", "hover:text-orange-700");
+      missionTab.classList.remove(
+        "bg-primary",  // Back to bg-primary
+        "text-white",
+        "shadow-sm",
+        "rounded-md",
+      );
+      missionTab.classList.add("text-orange-600", "hover:text-orange-700");
+      visionContent.classList.remove("hidden");
+      missionContent.classList.add("hidden");
+    });
+  });
+</script>
   </body>
 </html>
